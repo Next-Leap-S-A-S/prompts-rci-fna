@@ -4,6 +4,8 @@ Herramienta de apoyo para la capacitación en escritura de prompts bajo la
 metodología **Rol · Contexto · Instrucción**, adaptada al trabajo del equipo
 de Auditoría Interna del Fondo Nacional del Ahorro (FNA).
 
+**Publicado en:** https://next-leap-s-a-s.github.io/prompts-rci-fna/
+
 ## Qué contiene
 
 - **Biblioteca** — 36 prompts listos para usar, 9 por cada uno de los 4
@@ -60,7 +62,7 @@ editables se escriben entre corchetes: `[fecha]`.
 Los prompts están diseñados para trabajar con información anonimizada. Antes
 de pegar contenido en una herramienta de IA hay que reemplazar nombres,
 cédulas, números de crédito y radicados de auditoría por marcadores
-genéricos; no pegar información sujeta a reserva, y usar únicamente las
+genéricos. No pegar información sujeta a reserva. Usar únicamente las
 herramientas de IA aprobadas por la entidad. La salida del modelo es un
 borrador: el juicio profesional y la conclusión de auditoría siguen siendo
 del auditor responsable.
