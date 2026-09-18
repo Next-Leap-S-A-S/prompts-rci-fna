@@ -4,7 +4,7 @@
 - template.html        : marcado y logica (UTF-8, legible)
 - prompts-*.js         : biblioteca, un archivo por area (orden: financiera, cartera, ti, cumplimiento)
 - rondas.js            : rondas del ejercicio
-- assets/*.woff2, .png : tipografias y logo, se incrustan en base64
+- assets/*.woff2, .png, hero.webp : tipografias, logo y foto del hero, se incrustan en base64
 
 El resultado es un unico archivo ASCII puro: fuera de <script> los caracteres
 no ASCII van como entidades HTML (&#NNNN;) y dentro de <script> como \\uXXXX.
@@ -72,6 +72,7 @@ def main():
     tpl = (SRC / "template.html").read_text(encoding="utf-8")
     html = (tpl.replace("{{FONT_CSS}}", font_css())
                .replace("{{LOGO_PNG}}", "data:image/png;base64," + b64(SRC / "assets" / "nextleap-mark.png"))
+               .replace("{{HERO_IMG}}", "data:image/webp;base64," + b64(SRC / "assets" / "hero.webp"))
                .replace("{{PROMPTS}}", prompts_js())
                .replace("{{RONDAS}}", (SRC / "rondas.js").read_text(encoding="utf-8").strip()))
     left = re.findall(r"\{\{[A-Z_]+\}\}", html)
